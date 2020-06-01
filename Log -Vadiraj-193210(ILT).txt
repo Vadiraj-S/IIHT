@@ -1,0 +1,4 @@
+Thursday---Error Message: Attempted to divide by zero.---Stack Trace:    at FileLog.Program.Main(String[] args) in C:\Users\vadi\source\repos\FileLog\FileLog\Program.cs:line 19
+Thursday4/2/2020 5:15:38 PM---Error Message: Attempted to divide by zero.---Stack Trace:    at FileLog.Program.Main(String[] args) in C:\Users\vadi\source\repos\FileLog\FileLog\Program.cs:line 19
+Thursday4/2/2020 5:18:39 PM---Error Message: Attempted to divide by zero.---Stack Trace:    at FileLog.Program.Main(String[] args) in C:\Users\vadi\source\repos\FileLog\FileLog\Program.cs:line 19
+Thursday4/2/2020 5:18:48 PM---Error Message: Attempted to divide by zero.---Stack Trace:    at FileLog.Program.Main(String[] args) in C:\Users\vadi\source\repos\FileLog\FileLog\Program.cs:line 19

@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+
+namespace FileLog
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int a = 100;
+                int b = 0;
+                int res = a / b;
+                Console.WriteLine(res);
+            }
+            catch (Exception ex)
+            {
+                ErrorLogging(ex);
+            }
+            Console.WriteLine("Enter the day for which you want records");
+            string day=Console.ReadLine();
+            ReadError(day);
+           
+
+        }
+
+        public static void ErrorLogging(Exception ex)
+        {
+            string strPath = @"D:\Log.txt";
+            if (!File.Exists(strPath))
+            {
+                File.Create(strPath).Dispose();
+            }
+            using (StreamWriter sw = File.AppendText(strPath))
+            {
+                sw.WriteLine(DateTime.Now.ToString("dddd")+DateTime.Now.ToString()+"---"+ "Error Message: " + ex.Message+"---"+ "Stack Trace: " + ex.StackTrace);
+
+            }
+        }
+
+        public static void ReadError(string d)
+        {
+            string strPath = @"D:\Log.txt";
+            using (StreamReader sr = new StreamReader(strPath))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if(line.Contains(d))
+                      Console.WriteLine(line);
+                }
+            }
+        }
+    }
+}
